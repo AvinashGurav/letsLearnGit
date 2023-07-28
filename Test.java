@@ -11,6 +11,6 @@ public class ConstrReference
         AviInterface a2 = Avinashnew;
         a2.getAvi(5);
 
-    }
+    }//modified
 
 }
