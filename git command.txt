@@ -71,3 +71,8 @@ git remote add origin https://github.com/AvinashGurav/letsLearnGit.git
 git branch -M main
 git push -u origin main
 
+https://timmousk.com/blog/git-push-hangs/#reason-4-you-are-trying-to-push-a-very-large-file
+
+
+to push dev to remote
+git push -u origin dev
