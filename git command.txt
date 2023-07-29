@@ -140,4 +140,77 @@ then click 'merge pull request'->confirm merge
 serach repo
 
 
+Even you can merge two branches in github also 
 
+use 'Compare and pull request' option
+
+create pull request->Resolve conflits->
+resolve manually and
+mark as resolved
+
+commit merege->merge pull request->confirm merge
+
+merge 
+
+----------------------push your local project from eclipse-----------
+Create new repository in github
+
+copy its link e.g 
+https://github.com/AvinashGurav/jpademo.git
+
+then  go eclipse team->share project->create new repository
+it will create local repository
+
+and it shows you quetion mark
+
+commit code to local repository
+team->commit->click commit and push
+if not work then
+
+team->open repository view-> click remote _>Create Remote->
+remote name ->origin
+change uril
+
+---------How to create private repository and ssh keys
+
+1.create new private repository  in github
+2.go to folder ->click open git bash here
+3.commit to local repository code 1st
+4.now go to github and generate ssh url with below steps
+https-https://github.com/AvinashGurav/java8.git
+ssh->git@github.com:AvinashGurav/java8.git
+5.top right->settings->ssh and gpg keys
+6.click generate ssh keys
+7.Generate a new ssh key and adding it to the ssh-agent->windows->copy command
+
+
+You can generate a new SSH key on your local machine. After you generate the key, you can add the public key to your account on GitHub.com to enable authentication for Git operations over SSH.
+
+Open Git Bash.
+
+Paste the text below, substituting in your GitHub email address.
+
+ssh-keygen -t ed25519 -C "avinashgurav36@gmail.com"
+
+This creates a new SSH key, using the provided email as a label.
+
+> Generating public/private ALGORITHM key pair.
+
+Your identification has been saved in /c/Users/SACHIN/.ssh/id_ed25519
+Your public key has been saved in /c/Users/SACHIN/.ssh/id_ed25519.pub
+
+it will generate public key in  /c/Users/SACHIN/.ssh/id_ed25519.pub
+
+copy public key 
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN35TLRRN4+Gk+ClT3xpiKzNdikWJBVRQebK+/sPu4lk avinashgurav36@gmail.com
+
+
+
+
+again go to top right->settings->ssh and gpg keys-> click new SSH key
+
+
+after save
+copy ssh link
+git@github.com:AvinashGurav/java8.git
