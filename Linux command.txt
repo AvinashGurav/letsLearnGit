@@ -1,0 +1,6 @@
+ls  ->list
+ls- a -> show me all hidden files
+ls .git
+
+touch  -> to create new file
+rm -rf <filename>  ->remove/delete file

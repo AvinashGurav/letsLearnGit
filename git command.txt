@@ -1,3 +1,4 @@
+install git for windows 64 bit
 git --version
 git config --global user.name "Avinash Gurav"
 git config --global user.email "avinashgurav36@gmail.com"
@@ -15,7 +16,7 @@ ls -a
 
 git status
 git add <file name>
-
+git restore --staged <file>  -to unstage
 
 Working directory----->(git add)--->staging area-----(git commit)---->repository
 
@@ -31,6 +32,12 @@ Head->master
 git add .
 
 git checkout <commit hash code/branch name>
+git reset <commit hash code/branch name>  -->it will reset changes
+
+git restore <filename>
+
+git stash  --> send pepole to bakstage i.e git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on.
+git stash pop  -->call to those pepole i.e The git stash pop command helps us to remove or throw away the latest or the topmost stash. The stash pop command will take the content from the stash file and then apply those changes to our current working file.
 
 git checkout master
 git branch
@@ -214,3 +221,78 @@ again go to top right->settings->ssh and gpg keys-> click new SSH key
 after save
 copy ssh link
 git@github.com:AvinashGurav/java8.git
+
+
+git remote add origin git@github.com:AvinashGurav/java8.git
+git branch -M main
+git push -u origin main
+
+
+if you dont want one commit fom two
+git log
+
+copy commit hashid
+git reset <hashid>
+git status
+git add .
+git stash
+git push original kunal -f
+-f  means forcefully push
+
+
+fetch upstream  ---if upstream branch is changed then
+
+git checkout main
+
+---it will fetch all the branches from upstream & prune means once its deleted they will also fetched
+get fetch --all --prune
+--fetching oringin
+--fethcing upstream
+
+------to add upstream remote
+git add upstream <upstream or originalurl>
+original is my personal
+upstream is from where i forked it
+ 
+ --to change head 
+git reset --hard upstream/main
+
+
+now local fork and upstream will be same
+---then push it to fork repository---
+git push origin main
+
+
+or you can do
+
+
+git pull upstream main
+git push origin main
+
+or use ui
+fetch upstream->fetch and merge
+
+
+
+
+--------------------merege Conflit and squashing a commit
+
+git branch temp
+git checkout temp
+
+**always remeber whenever you create branch your main should be upto date
+
+suppose you have 4 commits
+
+git rebase -i <1st commit commithashid>
+
+all the commit above it either we pick or squash
+-i means interactive
+
+remove pick add s
+
+esc :wq
+
+
+read upgrad about open source project
+https://www.upgrad.com/blog/java-open-source-projects/
